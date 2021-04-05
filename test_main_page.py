@@ -13,6 +13,10 @@ def test_guest_can_see_login_form(browser):
     page.should_be_login_form()
 
 
+<<<<<<< HEAD
+=======
+@pytest.mark.last_marker()
+>>>>>>> bfaebeda65a482d1cc075a16f157c18187cac48a
 def test_guest_can_close_login_form(browser):
     page = MainPage(browser, link)
     page.open()
@@ -55,6 +59,7 @@ def test_guest_cant_see_users_elements_in_header(browser):
     page.should_not_be_get_payment_out_btn()
 
 
+<<<<<<< HEAD
 def test_guest_can_go_to_restore_page_from_login_form(browser):
     page = MainPage(browser, link)
     page.open()
@@ -92,6 +97,8 @@ def test_guest_can_auth_by_google_from_login_form(browser):
     page.correct_link(expected_link)
 
 
+=======
+>>>>>>> bfaebeda65a482d1cc075a16f157c18187cac48a
 # ------регистрация------
 
 
