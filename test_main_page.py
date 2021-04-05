@@ -95,7 +95,6 @@ def test_guest_can_auth_by_google_from_login_form(browser):
 
 # ------регистрация------
 
-
 def test_user_can_see_register_form(browser):
     page = MainPage(browser, link)
     page.open()
