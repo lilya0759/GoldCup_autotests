@@ -91,7 +91,25 @@ class MainPage(BasePage):
         assert self.is_not_element_present(
             *MainPageLocators.PAYMENT_OUT_BTN), "Кнопка вывода в шапке сайта отображается"
 
+    def open_restore_link(self):
+        restore_link = self.browser.find_element(
+            *MainPageLocators.FORGOT_PASSW_LINK)
+        restore_link.click()
+        time.sleep(2)
+
+    def go_to_auth_by_vk(self):
+        self.browser.find_element(*MainPageLocators.VK_BTN).click()
+        time.sleep(2)
+
+    def go_to_auth_by_ok(self):
+        self.browser.find_element(*MainPageLocators.OK_BTN).click()
+        time.sleep(2)
+
+    def go_to_auth_by_google(self):
+        self.browser.find_element(*MainPageLocators.GOOGLE_BTN).click()
+        time.sleep(2)
     # регистрация
+
     def open_register_form(self):
         register_form = self.browser.find_element(
             *MainPageLocators.REGISTER_LINK)
